@@ -1,0 +1,33 @@
+---
+import ExperieanciaItem from "./ExperieanciaItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Octubre 2024  a Diciembre' 2024",
+    title: "Desarrollador Web, practicas empresariales",
+    empresa: "Printec, Cloud & Software",
+    description:
+      "Empresa de desarrollo de Software en la que desempeñé las practicas realizando las labores de un desrrolador Jr. Durante ese proceso desarrollé un software de gestion de usaurios con Login y gestión de BD que ma ayudó a mejorar mis aptitudes como desarrollador.",
+  },
+  {
+    date: "Febrero 2016 a Junio 2016",
+    title: "Técnico Informático, practicas empresariales",
+    empresa: "Consell Comarcal de l'Alt Empordá",
+    description:
+      "Desarrollé mis practicas de CFGM de redes y Microinformática en un entorno Oficial del Estado procurandome así aptitudes tanto en el ámbito de la informática, montaje de ordenadores, instalación de SO, configuración de servidores y redes etc..., como en el ámbito de la seguridad informática que ese puesto requeria",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperieanciaItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
+<!-- 
+ -Ofrecer soporte técnico a todos los trabajadores del centro mediante un sistema de Ticketing, Instalación de software, hardware y corrección de errores críticos.
+–Instalación y mantenimiento de sistemas y redes informáticas en centros sociales. -->

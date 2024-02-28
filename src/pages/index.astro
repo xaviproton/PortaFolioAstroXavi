@@ -1,0 +1,220 @@
+---
+import "@fontsource-variable/onest";
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import SocialP from "../components/icons/SocialP.astro";
+import Mail from "../components/icons/Mail.astro";
+import Experiencia from "../components/Experiencia.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Work from "../components/icons/Work.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+import Projects from "../components/Projects.astro";
+import Vitae from "../components/icons/Vitae.astro";
+import Skills from "../components/icons/Skills.astro";
+import Html from "../components/icons/Html.astro";
+import Tailwind from "../components/icons/Tailwind.astro";
+import Css from "../components/icons/Css.astro";
+import JavaScript from "../components/icons/JavaScript.astro";
+import Bootstrap from "../components/icons/Bootstrap.astro";
+import MySQL from "../components/icons/MySQL.astro";
+import MongoDB from "../components/icons/MongoDB.astro";
+import NodeJs from "../components/icons/NodeJs.astro";
+import Express from "../components/icons/Express.astro";
+import React from "../components/icons/React.astro";
+import SectionSkill from "../components/SectionSkill.astro";
+import Java from "../components/icons/Java.astro";
+import AstroIcon from "../components/icons/AstroIcon.astro";
+import PhpIcon from "../components/icons/PhpIcon.astro";
+import Wordpress from "../components/icons/Wordpress.astro";
+import Git from "../components/icons/Git.astro";
+import Oracle from "../components/icons/Oracle.astro";
+import Footer from "../components/Footer.astro";
+import FrontEnd from "../components/icons/FrontEnd.astro";
+import BackEnd from "../components/icons/BackEnd.astro";
+---
+
+<Layout
+  title="PortaFolio de Xavi Martin - Desarrollador y Programador web"
+  ,
+  description="Estoy buscando trabajo de desarrollador, soy aplicado y efectivo, no me canso de aprender"
+>
+  <main class="px-5 mt-4">
+    <SectionContainer class="py-24 pb-24">
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-2 lg:gap-x-10 md:gap-x-10 pb-6 lg:pb-10"
+      >
+        Hola, soy Xavi Martin
+        <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener">
+          <Badge class="sm:mr-4">Buscando trabajo</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl opacity-80 text-pretty max-w-[800px]">
+        <span class="text-yellow-200"
+          >Desarrollador de aplicaciones Web y Java</span
+        >, Autodidacta de la programación. Trabajé exitosamente como <span
+          class="text-yellow-200">Cocinero</span
+        > durante +20 años hasta que decidí cambiar de ámbito laboral. Soy una persona
+        responsable y comprometida con mis objetivos personales y laborales, además,
+        estoy seguro de poder transferir mi experiencia y habilidades adquiridas
+        en la hosteleria al ámbito del desarrollo.
+        <h2
+          class="text-xl lg:text-2xl opacity-80 text-pretty mt-3 max-w-[800px]"
+        >
+          Cada dia sigo mejorando mis aptitudes en la búsqueda de una
+          <span class="text-yellow-200">oportunidad laboral</span> y poder demostrar,
+          potenciar y desarrollar mi conocimiento en este nuevo ámbito
+        </h2>
+      </h2>
+
+      <nav class="flex gap-5 mt-8 flex-wrap">
+        <SocialP
+          href="https://www.canva.com/design/DAFXXfLif-k/V6wASkiYOPAJTcopQhHzTQ/view?utm_content=DAFXXfLif-k&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+        >
+          <Vitae class="size-5 md:size-6" />
+          Curriculum Vitae
+        </SocialP>
+
+        <SocialP href="https://www.linkedin.com/feed/">
+          <LinkedIn class="size-5 md:size-6" />
+          Linkedin
+        </SocialP>
+
+        <SocialP href="https://github.com/xaviproton">
+          <GitHubIcon class="size-5 md:size-6" />
+          GitHub
+        </SocialP>
+
+        <SocialP href="mailto:xavimans@gmail.com">
+          <Mail class="size-5 md:size-6" />
+          xavimans@gmail.com
+        </SocialP>
+      </nav>
+    </SectionContainer>
+
+
+    <SectionSkill id="skills" class="mt-16">
+      <h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center mt-16">
+        <Skills class="size-9" />
+        My Skills
+      </h2>
+      <div class="flex" >
+        <FrontEnd class="size-9" />
+        <span class="ml-2 mt-4" >Frontend</span>
+      </div>
+      
+      <div
+        class="grid grid-cols-4 mt-2 mb-14 md:grid-cols-8 sm:grid-cols-8 lg:grid-cols-8 gap-x-2 gap-y-9 m-auto rounded-lg p-6 bg-gradient-to-b from-gray-950 to-zinc-900 shadow-lg shadow-cyan-500/30 hover:shadow-sm"
+      >
+        <div class="flex flex-col justify-center items-center">
+          <Html class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>HTML</span>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <Css class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>CSS</span>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <JavaScript class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>JavaScript</span>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <Tailwind class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>TailWind</span>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <Bootstrap class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>Bootstrap</span>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <React class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>React</span>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <AstroIcon class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>Astro</span>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <Wordpress class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>Wordpress</span>
+        </div>
+      </div>
+
+      <div class="flex mb-2" >
+        <BackEnd class="size-9" />
+        <span  class="ml-2 mt-4">BackEnd</span>
+      </div>
+     
+      <div
+        class="grid grid-cols-4 md:grid-cols-8 sm:grid-cols-8 lg:grid-cols-8 gap-x-2 gap-y-9 m-auto rounded-lg p-6 bg-gradient-to-b from-gray-950 to-zinc-900 shadow-lg shadow-cyan-500/30 hover:shadow-sm"
+      >
+        <div  class="flex flex-col justify-center items-center">
+          <JavaScript class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>JavaScript</span>
+        </div>
+        <div  class="flex flex-col justify-center items-center">
+          <Java class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>Java</span>
+        </div>
+        <div  class="flex flex-col justify-center items-center">
+          <PhpIcon class="size-10 md:size-11 sm:size-11 mb-1" />
+          <span>PHP</span>
+        </div>
+        <div  class="flex flex-col justify-center items-center">
+          <NodeJs class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>NodeJs</span>
+        </div>
+        <div  class="flex flex-col justify-center items-center">
+          <Express
+            class="bg-yellow-200 rounded-full py-2 size-10 md:size-10 sm:size-10 mb-1"
+          />
+          <span>Express</span>
+        </div>
+        <div  class="flex flex-col justify-center items-center">
+          <MySQL class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>MySQL</span>
+        </div>
+        <div  class="flex flex-col justify-center items-center">
+          <MongoDB class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>MongoDB</span>
+        </div>
+        <div  class="flex flex-col justify-center items-center">
+          <Git class="size-10 md:size-10 sm:size-10 mb-1" />
+          <span>Git</span>
+        </div>
+
+        <div  class="flex flex-col justify-center items-center ml-6">
+          <Oracle class="size-10 md:size-10 sm:size-10" />
+          <span class="-mt-6" >DataBase</span>
+        </div>
+      </div>
+    </SectionSkill>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
+        <CodeIcon class="size-9" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
+        <Work class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experiencia />
+    </SectionContainer>
+    <SectionContainer id="contacto" class="disponibilidad items-center ">
+      <div class="flex flex-col items-center bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] p-10">
+        <h1 class="text-3xl font-semibold mb-10 mt-10 animate-pulse text-red-500">
+          <span>Tel:</span> 647 644 506
+        </h1>
+        <h1 class="text-3xl font-semibold mb-10 animate-pulse text-yellow-200">
+          <span>Email: </span>xavimans@gmail.com
+        </h1>
+      </div>
+    </SectionContainer>
+  </main>
+</Layout>

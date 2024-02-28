@@ -1,0 +1,172 @@
+---
+import Html from "./icons/Html.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Css from "./icons/Css.astro";
+import Js from "./icons/JavaScript.astro";
+import SocialP2 from "./SocialP2.astro";
+import SourceCode from "./icons/SourceCode.astro";
+import LinkIcon from "./icons/LinkIcon.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import Express from "./icons/Express.astro";
+import Java from "./icons/Java.astro";
+import MongoDB from "./icons/MongoDB.astro";
+import MySQL from "./icons/MySQL.astro";
+import NodeJs from "./icons/NodeJs.astro";
+import PhpIcon from "./icons/PhpIcon.astro";
+import React from "./icons/React.astro";
+import Wordpress from "./icons/Wordpress.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-black text-white",
+    icon: Html,
+  },
+
+  TAILWIND: {
+    name: "TailWind",
+    class: "bg-white text-[black]",
+    icon: Tailwind,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-black text-white",
+    icon: Css,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-black text-white",
+    icon: Js,
+  },
+  BOOTSTRAP: {
+    name: "Boostrap",
+    class: "bg-black text-white",
+    icon: Bootstrap,
+  },
+  EXPRESS: {
+    name: "Express",
+    class: "bg-white text-[black]",
+    icon: Express,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-black text-white",
+    icon: Java,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-black text-white",
+    icon: MongoDB,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-black text-white",
+    icon: MySQL,
+  },
+  NODEJS: {
+    name: "NodeJs",
+    class: "bg-black text-white",
+    icon: NodeJs,
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-black text-white",
+    icon: PhpIcon,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: React,
+  },
+  WORDPRESS: {
+    name: "Wordpress",
+    class: "bg-black text-white",
+    icon: Wordpress,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Rick & Morty API",
+    description:
+      " Uno de mis primeros proyectos es una Api de la serie de animación Rick&Morty hecho con JavaScript, HTML/CSS usando varios efectos y pseudolementos CSS. Esta aplicación consume parcialmente la API https://rickandmortyapi.com/.",
+    link: "https://rickandmortyapi-g489.onrender.com/index.html",
+    github: "https://github.com/xaviproton/Rick-Morty-API",
+    image: "../imagen/Rick.webp",
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.JAVASCRIPT,
+    ],
+  },
+  {
+    title: " TimeWarp Tours Landing Page  & Shop",
+    description:
+      " Web/tienda creada con React en la que creo una landing Page en la portada pero hay una tienda  en la propia app. Este es un proyecto imaginativo que me sirvió para profundicar en los conceptos básicos de React ",
+    link: "https://rococo-starship-2a1b80.netlify.app/5",
+    github: "https://github.com/xaviproton/React-LandingPageViajes",
+    image: "../imagen/timewarp.png",
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.REACT,
+      TAGS.JAVASCRIPT,
+    ],
+  },
+  {
+    title: " Gestión de Usuarios con Login PHP/MySQL",
+    description:
+      "App creada con PHP  y MySQL de gestión de usuarios con Login y nivel de acceso para 3 tipos diferentes de usuarios. También tiene implementada la función para copiar y restaurar la BD dede el mismo programa. Para crear o eliminar usaurios, exige una contraseña unica que está establecida para superadmin en la BD ",
+    link: "",
+    github: "https://github.com/xaviproton/Gestor-Login-de-Usuarios-PHP-mysql.git",
+    image: "../imagen/270shots_so.png",
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.PHP,
+      TAGS.MYSQL,
+      TAGS.JAVASCRIPT,
+    ],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags, github, link }) => (
+    <article>
+      <h3 class="text-3xl font-semibold text-yellow-200 mb-8 mt-14">{title}</h3>
+      <p class="text-lg m-2 mb-6 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2  text-center">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs items-center ${tag.class} py-1 px-3`}
+            >
+              <tag.icon class="size-5 " />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+       
+      </ul>
+
+      <img
+        class="rounded-lg shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${title}`}
+      />
+      <nav class=" rounded-lg shadow-2xl shadow-cyan/50 flex gap-6 mt-2 ml-3">
+          <SocialP2 href={github}>
+            <SourceCode class="size-5 md:size-6" />
+            Code
+          </SocialP2>
+          <SocialP2 href={link}>
+            <LinkIcon class="size-5 md:size-6" />
+            Link
+          </SocialP2>
+        </nav>
+    </article>
+  ))
+}
+
+<!--  max-[500px]:flex-col  lg:ml-64 md:ml-96 sm:ml-40 -->
