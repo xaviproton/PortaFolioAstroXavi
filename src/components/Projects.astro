@@ -15,6 +15,8 @@ import NodeJs from "./icons/NodeJs.astro";
 import PhpIcon from "./icons/PhpIcon.astro";
 import React from "./icons/React.astro";
 import Wordpress from "./icons/Wordpress.astro";
+import ProjectCard from "./ProjectCard.astro";
+
 
 const TAGS = {
   HTML: {
@@ -98,6 +100,7 @@ const PROJECTS = [
       TAGS.CSS,
       TAGS.JAVASCRIPT,
     ],
+    category: "web",
   },
   {
     title: " TimeWarp Tours Landing Page  & Shop",
@@ -112,6 +115,7 @@ const PROJECTS = [
       TAGS.REACT,
       TAGS.JAVASCRIPT,
     ],
+    category: "web",
   },
   {
     title: " Gestión de Usuarios con Login PHP/MySQL",
@@ -126,46 +130,28 @@ const PROJECTS = [
       TAGS.PHP,
       TAGS.MYSQL,
     ],
+    category: "software",
   },
 ];
 ---
 
-{
-  PROJECTS.map(({ image, title, description, tags, github, link }) => (
-    <article>
-      <h3 class="text-3xl font-semibold text-yellow-200 mb-8 mt-14">{title}</h3>
-      <p class="text-lg m-2 mb-6 text-pretty">{description}</p>
-      <ul class="flex gap-x-2 flex-row mb-2  text-center">
-        {tags.map((tag) => (
-          <li>
-            <span
-              class={`flex gap-x-2 rounded-full text-xs items-center ${tag.class} py-1 px-3`}
-            >
-              <tag.icon class="size-5 " />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-       
-      </ul>
+<!-- Proyectos Web -->
+<h2 class="text-3xl font-bold mt-16 mb-8 text-yellow-300">🕸️ Proyectos Web</h2>
+{PROJECTS.filter(p => p.category === "web").map((p) => (
+  <ProjectCard {...p} />
+))}
 
-      <img
-        class="rounded-lg shadow-2xl shadow-white/10"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${title}`}
-      />
-      <nav class=" rounded-lg shadow-2xl shadow-cyan/50 flex gap-6 mt-2 ml-3">
-          <SocialP2 href={github}>
-            <SourceCode class="size-5 md:size-6" />
-            Code
-          </SocialP2>
-          <SocialP2 href={link}>
-            <LinkIcon class="size-5 md:size-6" />
-            Link
-          </SocialP2>
-        </nav>
-    </article>
-  ))
-}
+<!-- Proyectos Software -->
+<h2 class="text-3xl font-bold mt-24 mb-8 text-yellow-300">🧩 Desarrollo de Software</h2>
+{PROJECTS.filter(p => p.category === "software").map((p) => (
+  <ProjectCard {...p} />
+))}
+
+<!-- Proyectos Análisis de Datos -->
+<h2 class="text-3xl font-bold mt-24 mb-8 text-yellow-300">📊 Análisis de Datos</h2>
+{PROJECTS.filter(p => p.category === "datos").map((p) => (
+  <ProjectCard {...p} />
+))}
+
 
 <!--  max-[500px]:flex-col  lg:ml-64 md:ml-96 sm:ml-40 -->

@@ -1,0 +1,44 @@
+---
+import SocialP2 from "./SocialP2.astro";
+import SourceCode from "./icons/SourceCode.astro";
+import LinkIcon from "./icons/LinkIcon.astro";
+
+const { title, description, image, tags, github, link } = Astro.props;
+---
+
+<article class="mb-20 transition-all duration-300 hover:scale-[1.02] hover:shadow-cyan-400/20">
+  <h3 class="text-2xl font-semibold text-yellow-200 mb-4">{title}</h3>
+
+  <p class="text-lg mb-4">{description}</p>
+
+  <ul class="flex gap-2 flex-wrap mb-4">
+    {tags.map((tag) => (
+      <li>
+        <span class={`flex gap-x-2 rounded-full text-xs items-center ${tag.class} py-1 px-3`}>
+          <tag.icon class="size-5" />
+          {tag.name}
+        </span>
+      </li>
+    ))}
+  </ul>
+
+  <img
+    class="w-full max-w-4xl rounded-lg shadow-xl shadow-white/10 mb-4"
+    src={image}
+    alt={`Captura de pantalla del proyecto ${title}`}
+  />
+
+  <nav class="rounded-lg shadow-xl shadow-cyan-500/50 flex gap-4 mt-2 ml-2">
+    <SocialP2 href={github}>
+      <SourceCode class="size-5 md:size-6" />
+      Code
+    </SocialP2>
+
+    {link && (
+      <SocialP2 href={link}>
+        <LinkIcon class="size-5 md:size-6" />
+        Link
+      </SocialP2>
+    )}
+  </nav>
+</article>
