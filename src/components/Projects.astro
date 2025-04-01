@@ -1,157 +1,153 @@
 ---
-import Html from "./icons/Html.astro";
-import Tailwind from "./icons/Tailwind.astro";
-import Css from "./icons/Css.astro";
-import Js from "./icons/JavaScript.astro";
-import SocialP2 from "./SocialP2.astro";
-import SourceCode from "./icons/SourceCode.astro";
-import LinkIcon from "./icons/LinkIcon.astro";
-import Bootstrap from "./icons/Bootstrap.astro";
-import Express from "./icons/Express.astro";
-import Java from "./icons/Java.astro";
-import MongoDB from "./icons/MongoDB.astro";
-import MySQL from "./icons/MySQL.astro";
-import NodeJs from "./icons/NodeJs.astro";
-import PhpIcon from "./icons/PhpIcon.astro";
-import React from "./icons/React.astro";
-import Wordpress from "./icons/Wordpress.astro";
-import ProjectCard from "./ProjectCard.astro";
-
+import Html from './icons/Html.astro';
+import Tailwind from './icons/Tailwind.astro';
+import Css from './icons/Css.astro';
+import Js from './icons/JavaScript.astro';
+import SocialP2 from './SocialP2.astro';
+import SourceCode from './icons/SourceCode.astro';
+import LinkIcon from './icons/LinkIcon.astro';
+import Bootstrap from './icons/Bootstrap.astro';
+import Express from './icons/Express.astro';
+import Java from './icons/Java.astro';
+import MongoDB from './icons/MongoDB.astro';
+import MySQL from './icons/MySQL.astro';
+import NodeJs from './icons/NodeJs.astro';
+import PhpIcon from './icons/PhpIcon.astro';
+import React from './icons/React.astro';
+import Wordpress from './icons/Wordpress.astro';
+import ProjectCard from './ProjectCard.astro';
 
 const TAGS = {
   HTML: {
-    name: "HTML",
-    class: "bg-black text-white",
+    name: 'HTML',
+    class: 'bg-black text-white',
     icon: Html,
   },
 
   TAILWIND: {
-    name: "TailWind",
-    class: "bg-white text-[black]",
+    name: 'TailWind',
+    class: 'bg-white text-[black]',
     icon: Tailwind,
   },
   CSS: {
-    name: "CSS",
-    class: "bg-black text-white",
+    name: 'CSS',
+    class: 'bg-black text-white',
     icon: Css,
   },
   JAVASCRIPT: {
-    name: "JavaScript",
-    class: "bg-black text-white",
+    name: 'JavaScript',
+    class: 'bg-black text-white',
     icon: Js,
   },
   BOOTSTRAP: {
-    name: "Boostrap",
-    class: "bg-black text-white",
+    name: 'Boostrap',
+    class: 'bg-black text-white',
     icon: Bootstrap,
   },
   EXPRESS: {
-    name: "Express",
-    class: "bg-white text-[black]",
+    name: 'Express',
+    class: 'bg-white text-[black]',
     icon: Express,
   },
   JAVA: {
-    name: "Java",
-    class: "bg-black text-white",
+    name: 'Java',
+    class: 'bg-black text-white',
     icon: Java,
   },
   MONGODB: {
-    name: "MongoDB",
-    class: "bg-black text-white",
+    name: 'MongoDB',
+    class: 'bg-black text-white',
     icon: MongoDB,
   },
   MYSQL: {
-    name: "MySQL",
-    class: "bg-black text-white",
+    name: 'MySQL',
+    class: 'bg-black text-white',
     icon: MySQL,
   },
   NODEJS: {
-    name: "NodeJs",
-    class: "bg-black text-white",
+    name: 'NodeJs',
+    class: 'bg-black text-white',
     icon: NodeJs,
   },
   PHP: {
-    name: "PHP",
-    class: "bg-black text-white",
+    name: 'PHP',
+    class: 'bg-black text-white',
     icon: PhpIcon,
   },
   REACT: {
-    name: "React",
-    class: "bg-black text-white",
+    name: 'React',
+    class: 'bg-black text-white',
     icon: React,
   },
   WORDPRESS: {
-    name: "Wordpress",
-    class: "bg-black text-white",
+    name: 'Wordpress',
+    class: 'bg-black text-white',
     icon: Wordpress,
   },
 };
 
 const PROJECTS = [
   {
-    title: "Rick & Morty API",
+    title: 'Rick & Morty API',
     description:
-      " Uno de mis primeros proyectos es una Api de la serie de animación Rick&Morty hecho con JavaScript, HTML/CSS usando varios efectos y pseudolementos CSS. Esta aplicación consume parcialmente la API https://rickandmortyapi.com/.",
-    link: "https://rickandmortyapi-g489.onrender.com/index.html",
-    github: "https://github.com/xaviproton/Rick-Morty-API",
-    image: "../imagen/Rick.webp",
-    tags: [
-      TAGS.HTML,
-      TAGS.CSS,
-      TAGS.JAVASCRIPT,
-    ],
-    category: "web",
+      'Este proyecto nació como uno de mis primeros ejercicios prácticos usando HTML, CSS y JavaScript puro. Era una pequeña app que consumía la API de Rick and Morty de forma parcial y aplicaba efectos visuales con pseudo-elementos y animaciones en CSS. Con el tiempo, decidí rehacer completamente el proyecto y llevarlo a otro nivel: lo migré a React y Tailwind CSS, aprovechando componentes reutilizables, animaciones con framer-motion, y una arquitectura más moderna y escalable. La nueva versión no solo mantiene el espíritu de la original, sino que lo mejora en diseño, rendimiento y experiencia de usuario. La idea es seguir ampliándolo con más funcionalidades del multiverso... porque Rick no se conformaría con menos 🌀',
+
+    link: 'https://rickand-morty-api-react.vercel.app/',
+    github: 'https://github.com/xaviproton/RickandMortyAPIReact.git',
+    image: '../imagen/Rick.webp',
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+    category: 'web',
   },
   {
-    title: " TimeWarp Tours Landing Page  & Shop",
+    title: ' TimeWarp Tours Landing Page  & Shop',
     description:
-      " Web/tienda creada con React en la que creo una landing Page en la portada pero hay una tienda  en la propia app. Este es un proyecto imaginativo que me sirvió para profundicar en los conceptos básicos de React ",
-    link: "https://timewarptours.netlify.app",
-    github: "https://github.com/xaviproton/React-LandingPageViajes",
-    image: "../imagen/timewarp.png",
-    tags: [
-      TAGS.HTML,
-      TAGS.CSS,
-      TAGS.REACT,
-      TAGS.JAVASCRIPT,
-    ],
-    category: "web",
+      ' Web/tienda creada con React en la que creo una landing Page en la portada pero hay una tienda  en la propia app. Este es un proyecto imaginativo que me sirvió para profundicar en los conceptos básicos de React ',
+    link: 'https://timewarptours.netlify.app',
+    github: 'https://github.com/xaviproton/React-LandingPageViajes',
+    image: '../imagen/timewarp.png',
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT, TAGS.JAVASCRIPT],
+    category: 'web',
   },
   {
-    title: " Gestión de Usuarios con Login PHP/MySQL",
+    title: ' Gestión de Usuarios con Login PHP/MySQL',
     description:
-      "App creada con PHP  y MySQL de gestión de usuarios con Login y nivel de acceso para 3 tipos diferentes de usuarios. También tiene implementada la función para copiar y restaurar la BD desde el mismo programa. Para crear o eliminar usuarios, exige una contraseña unica que está establecida para superadmin en la BD ",
-    link: "",
-    github: "https://github.com/xaviproton/Gestor-Login-de-Usuarios-PHP-mysql.git",
-    image: "../imagen/270shots_so.png",
-    tags: [
-      TAGS.HTML,
-      TAGS.CSS,
-      TAGS.PHP,
-      TAGS.MYSQL,
-    ],
-    category: "software",
+      'App creada con PHP  y MySQL de gestión de usuarios con Login y nivel de acceso para 3 tipos diferentes de usuarios. También tiene implementada la función para copiar y restaurar la BD desde el mismo programa. Para crear o eliminar usuarios, exige una contraseña unica que está establecida para superadmin en la BD ',
+    link: '',
+    github:
+      'https://github.com/xaviproton/Gestor-Login-de-Usuarios-PHP-mysql.git',
+    image: '../imagen/270shots_so.png',
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.MYSQL],
+    category: 'software',
   },
 ];
 ---
 
 <!-- Proyectos Web -->
 <h2 class="text-3xl font-bold mt-16 mb-8 text-yellow-300">🕸️ Proyectos Web</h2>
-{PROJECTS.filter(p => p.category === "web").map((p) => (
-  <ProjectCard {...p} />
-))}
+{
+  PROJECTS.filter((p) => p.category === 'web').map((p) => (
+    <ProjectCard {...p} />
+  ))
+}
 
 <!-- Proyectos Software -->
-<h2 class="text-3xl font-bold mt-24 mb-8 text-yellow-300">🧩 Desarrollo de Software</h2>
-{PROJECTS.filter(p => p.category === "software").map((p) => (
-  <ProjectCard {...p} />
-))}
+<h2 class="text-3xl font-bold mt-24 mb-8 text-yellow-300">
+  🧩 Desarrollo de Software
+</h2>
+{
+  PROJECTS.filter((p) => p.category === 'software').map((p) => (
+    <ProjectCard {...p} />
+  ))
+}
 
 <!-- Proyectos Análisis de Datos -->
-<h2 class="text-3xl font-bold mt-24 mb-8 text-yellow-300">📊 Análisis de Datos</h2>
-{PROJECTS.filter(p => p.category === "datos").map((p) => (
-  <ProjectCard {...p} />
-))}
-
+<h2 class="text-3xl font-bold mt-24 mb-8 text-yellow-300">
+  📊 Análisis de Datos
+</h2>
+{
+  PROJECTS.filter((p) => p.category === 'datos').map((p) => (
+    <ProjectCard {...p} />
+  ))
+}
 
 <!--  max-[500px]:flex-col  lg:ml-64 md:ml-96 sm:ml-40 -->
